@@ -27,9 +27,7 @@ function App() {
     await api.delete(`/repositories/${id}`)
 
     const repositoryIndex = repositories.findIndex((repo) => repo.id === id)
-
     const repositoriesClone = repositories
-
     repositoriesClone.splice(repositoryIndex, 1)
 
     setProjects([...repositoriesClone])
